@@ -1,15 +1,16 @@
 package main
 
 import (
-	"ascii/PKG"
 	"fmt"
 	"log"
 	"os"
 	"strings"
+
+	PKG "ascii/pkg"
 )
 
 func main() {
-	//enting file
+	// enting file
 	if len(os.Args) == 1 {
 		log.Fatal("Wrong number of parameters!!!! ")
 		return
@@ -36,7 +37,7 @@ func main() {
 
 	arr[0], arr[1] = arr[1], arr[0]
 
-	//entry of txt
+	// entry of txt
 	for _, v := range arr[1] {
 		if v < 32 || v > 126 {
 			log.Fatal("wrong text entered!!! ")
